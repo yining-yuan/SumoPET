@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tazs>
-    <!-- Define zones for your supply-demand analysis -->
-    <taz id="zone_north" edges="-1033116723 116895424#0 116895424#1"/>
-    <taz id="zone_south" edges="116931541#6 318468397#3"/>
-    <taz id="zone_east" edges="447013824#1 -116894402#0"/>
-    <taz id="zone_west" edges="116931503#3 -116894433#2"/>
-    <taz id="zone_center" edges="-116895498#0 335359823#1"/>
-</tazs>
