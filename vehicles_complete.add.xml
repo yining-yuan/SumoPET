@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+
+  <!-- Vehicle Types for Intermodal Simulation -->
+  
+  <!-- Private cars -->
+  <vType id="car" vClass="passenger" accel="2.6" decel="4.5" length="5.0" maxSpeed="50" color="1,1,0"/>
+  
+  <!-- Public transport -->
+  <vType id="bus" vClass="bus" accel="1.2" decel="4.0" length="12" maxSpeed="20" color="0,0,1"/>
+  
+  <!-- Micro-mobility -->
+  <vType id="bicycle" vClass="bicycle" accel="1.2" decel="3.0" length="1.6" maxSpeed="5.5" color="0,1,0"/>
+  <vType id="scooter" vClass="moped" accel="1.5" decel="3.5" length="1.2" maxSpeed="6.94" color="1,0,1"/>
+  <vType id="ebike" vClass="bicycle" accel="1.5" decel="3.0" length="1.8" maxSpeed="8.33" color="0,1,1"/>
+
+  <!-- Pedestrians -->
+  <vType id="pedestrian" vClass="pedestrian" accel="1.0" decel="2.0" length="0.5" maxSpeed="1.39" color="0.7,0.7,0.7"/>
+
+</additional>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+  <!-- Complete circular bus route with more stops -->
+  <route id="busRoute_L1" edges="116895424#1 -335359823#0 116894393#0 117065300#0 117065300#1 -485862722 870472193#0 870472193#1 870472193#2 447013824#0 447013824#1 116931671#1 116931671#2 116931671#3 447013803#0 447013803#1 116931503#0 116931503#1 116931503#2 116931503#3 116931503#4 116931503#5 694520143#0 116931541#1 116931541#2 116931541#3 116931541#4 116931541#5 116931541#6 -318468397#2 -318468397#1 -318468397#0 318468394#0 318468394#1 318468394#2 318468394#3 318468395#5 -117065261 117065201#1 -116931628#5 117065182 117065224#0 485862717#0 485862717#1 335359823#0 -116895424#1 116895424#1">
+    <stop busStop="stop_north" duration="30"/>
+    <stop busStop="stop_mid" duration="25"/>
+    <stop busStop="stop_east" duration="25"/>
+    <stop busStop="stop_west" duration="25"/>
+    <stop busStop="stop_south" duration="30"/>
+</route>
+
+  <!-- Buses every 5 minutes (300s) -->
+  <vehicle id="bus_L1_0" type="bus" route="busRoute_L1" depart="10" line="bus_L1"/>
+  <vehicle id="bus_L1_1" type="bus" route="busRoute_L1" depart="310" line="bus_L1"/>
+  <vehicle id="bus_L1_2" type="bus" route="busRoute_L1" depart="610" line="bus_L1"/>
+  <vehicle id="bus_L1_3" type="bus" route="busRoute_L1" depart="910" line="bus_L1"/>
+  <vehicle id="bus_L1_4" type="bus" route="busRoute_L1" depart="1210" line="bus_L1"/>
+  <vehicle id="bus_L1_5" type="bus" route="busRoute_L1" depart="1510" line="bus_L1"/>
+  <vehicle id="bus_L1_6" type="bus" route="busRoute_L1" depart="1810" line="bus_L1"/>
+  <vehicle id="bus_L1_7" type="bus" route="busRoute_L1" depart="2110" line="bus_L1"/>
+  <vehicle id="bus_L1_8" type="bus" route="busRoute_L1" depart="2410" line="bus_L1"/>
+  <vehicle id="bus_L1_9" type="bus" route="busRoute_L1" depart="2710" line="bus_L1"/>
+  <vehicle id="bus_L1_10" type="bus" route="busRoute_L1" depart="3010" line="bus_L1"/>
+  <vehicle id="bus_L1_11" type="bus" route="busRoute_L1" depart="3310" line="bus_L1"/>
+  <vehicle id="bus_L1_12" type="bus" route="busRoute_L1" depart="3610" line="bus_L1"/>
+  <vehicle id="bus_L1_13" type="bus" route="busRoute_L1" depart="3910" line="bus_L1"/>
+  <vehicle id="bus_L1_14" type="bus" route="busRoute_L1" depart="4210" line="bus_L1"/>
+  <vehicle id="bus_L1_15" type="bus" route="busRoute_L1" depart="4510" line="bus_L1"/>
+  <vehicle id="bus_L1_16" type="bus" route="busRoute_L1" depart="4810" line="bus_L1"/>
+  <vehicle id="bus_L1_17" type="bus" route="busRoute_L1" depart="5110" line="bus_L1"/>
+  <vehicle id="bus_L1_18" type="bus" route="busRoute_L1" depart="5410" line="bus_L1"/>
+  <vehicle id="bus_L1_19" type="bus" route="busRoute_L1" depart="5710" line="bus_L1"/>
+
+</routes>

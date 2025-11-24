@@ -1,0 +1,1 @@
+# python3 run_experiment.py static-laplace --cfg trikala_maas_project/config/trikala_merged.sumocfg 

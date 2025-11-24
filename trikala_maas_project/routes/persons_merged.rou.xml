@@ -1,0 +1,658 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+  <person id="person_3mode_1" depart="0" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="335359823#1" modes="bicycle" />
+  </person>
+  <person id="person_100_0" depart="0" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_1" depart="54" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_3mode_2" depart="100" color="1,0,0">
+    <personTrip from="-116894433#0" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_2" depart="108" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_3" depart="162" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_3mode_3" depart="200" color="1,0,0">
+    <personTrip from="-116895498#0" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_4" depart="216" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_5" depart="270" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_3mode_4" depart="300" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="318468397#3" modes="bicycle" />
+  </person>
+  <person id="person_100_6" depart="324" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_7" depart="378" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_3mode_5" depart="400" color="1,0,0">
+    <personTrip from="-116894433#2" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="bicycle" />
+  </person>
+  <person id="person_100_8" depart="432" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_9" depart="486" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_3mode_6" depart="500" color="0,1,0">
+    <personTrip from="-116894433#0" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_10" depart="540" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_11" depart="594" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_3mode_7" depart="600" color="0,1,0">
+    <personTrip from="-116895498#0" to="116895424#1" modes="bicycle" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="335359823#1" modes="car" />
+  </person>
+  <person id="person_100_12" depart="648" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_3mode_8" depart="700" color="0,1,0">
+    <personTrip from="335359823#1" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="-116894402#3" modes="car" />
+  </person>
+  <person id="person_100_13" depart="702" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_14" depart="756" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_3mode_9" depart="800" color="0,1,0">
+    <personTrip from="-116894433#2" to="116895424#1" modes="bicycle" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="318468397#3" modes="car" />
+  </person>
+  <person id="person_100_15" depart="810" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_16" depart="864" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_3mode_10" depart="900" color="0,1,0">
+    <personTrip from="116931562#0" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931541#3" />
+    <personTrip from="116931541#3" to="-116895498#0" modes="car" />
+  </person>
+  <person id="person_100_17" depart="918" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_18" depart="972" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_3mode_11" depart="1000" color="1,0,1">
+    <personTrip from="-1033116723" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_19" depart="1026" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_20" depart="1080" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_3mode_12" depart="1100" color="1,0,1">
+    <personTrip from="-116894433#0" to="116931541#3" modes="car" />
+    <personTrip from="116931541#3" to="116895424#1" modes="bicycle" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_21" depart="1134" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_22" depart="1188" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_3mode_13" depart="1200" color="1,0,1">
+    <personTrip from="-116895498#0" to="-116894433#2" modes="car" />
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#0" />
+  </person>
+  <person id="person_100_23" depart="1242" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_24" depart="1296" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_3mode_14" depart="1300" color="1,0,1">
+    <personTrip from="-1033116723" to="335359823#1" modes="car" />
+    <personTrip from="335359823#1" to="116895424#1" modes="bicycle" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="116931562#0" />
+  </person>
+  <person id="person_100_25" depart="1350" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_3mode_15" depart="1400" color="1,0,1">
+    <personTrip from="-116894433#0" to="-116895460#0" modes="car" />
+    <personTrip from="-116895460#0" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_26" depart="1404" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_27" depart="1458" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_3mode_16" depart="1500" color="0,1,1">
+    <personTrip from="-116894433#2" to="-116895498#0" modes="bicycle" />
+    <personTrip from="-116895498#0" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_28" depart="1512" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_29" depart="1566" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_3mode_17" depart="1600" color="0,1,1">
+    <personTrip from="335359823#1" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_30" depart="1620" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_31" depart="1674" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_3mode_18" depart="1700" color="0,1,1">
+    <personTrip from="-116895460#0" to="-116894433#0" modes="bicycle" />
+    <personTrip from="-116894433#0" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#0" />
+  </person>
+  <person id="person_100_32" depart="1728" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_33" depart="1782" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_3mode_19" depart="1800" color="0,1,1">
+    <personTrip from="116931562#0" to="335359823#1" modes="bicycle" />
+    <personTrip from="335359823#1" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_34" depart="1836" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_35" depart="1890" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_3mode_20" depart="1900" color="0,1,1">
+    <personTrip from="-116894402#0" to="-116895498#0" modes="bicycle" />
+    <personTrip from="-116895498#0" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_36" depart="1944" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_37" depart="1998" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_38" depart="2052" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_39" depart="2106" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_40" depart="2160" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_41" depart="2214" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_42" depart="2268" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_43" depart="2322" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_44" depart="2376" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_45" depart="2430" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_46" depart="2484" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_47" depart="2538" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_48" depart="2592" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_49" depart="2646" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_50" depart="2700" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_51" depart="2754" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_52" depart="2808" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_53" depart="2862" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_54" depart="2916" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_55" depart="2970" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_56" depart="3024" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_57" depart="3078" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_58" depart="3132" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_59" depart="3186" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_60" depart="3240" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_61" depart="3294" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_62" depart="3348" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_63" depart="3402" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_64" depart="3456" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_65" depart="3510" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_66" depart="3564" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_67" depart="3618" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_68" depart="3672" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_69" depart="3726" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_70" depart="3780" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_71" depart="3834" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_72" depart="3888" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_73" depart="3942" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_74" depart="3996" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_75" depart="4050" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_76" depart="4104" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_77" depart="4158" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_78" depart="4212" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_79" depart="4266" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_80" depart="4320" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_81" depart="4374" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_82" depart="4428" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_83" depart="4482" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_84" depart="4536" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_85" depart="4590" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_86" depart="4644" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_87" depart="4698" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_88" depart="4752" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_89" depart="4806" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_90" depart="4860" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_91" depart="4914" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_92" depart="4968" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+  <person id="person_100_93" depart="5022" color="1,0,1">
+    <personTrip from="-116894433#2" to="116895424#0" modes="bicycle" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="335359823#1" />
+  </person>
+  <person id="person_100_94" depart="5076" color="0,1,1">
+    <personTrip from="-116894433#0" to="-116895498#0" modes="car" />
+    <personTrip from="-116895498#0" to="-116894402#0" modes="bicycle" />
+  </person>
+  <person id="person_100_95" depart="5130" color="0,0,1">
+    <walk from="335359823#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="116931562#0" modes="bicycle" />
+  </person>
+  <person id="person_100_96" depart="5184" color="1,1,0">
+    <personTrip from="-116895498#0" to="116931541#3" modes="bicycle" />
+    <personTrip from="116931541#3" to="-116895460#0" modes="car" />
+  </person>
+  <person id="person_100_97" depart="5238" color="1,0.5,0">
+    <personTrip from="-1033116723" to="116895424#0" modes="car" />
+    <walk from="116895424#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="-116894402#3" />
+  </person>
+  <person id="person_100_98" depart="5292" color="1,0,0">
+    <personTrip from="-1033116723" to="116895424#1" modes="car" />
+    <walk from="116895424#1" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <walk from="116931541#6" to="318468397#3" />
+  </person>
+  <person id="person_100_99" depart="5346" color="0,1,0">
+    <walk from="-116895494#0" busStop="stop_north" />
+    <ride from="116895424#1" to="116931541#6" lines="bus_L1" />
+    <personTrip from="116931541#6" to="-116894433#2" modes="bicycle" />
+  </person>
+</routes>
