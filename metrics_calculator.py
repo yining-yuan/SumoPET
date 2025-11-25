@@ -58,6 +58,7 @@ class MetricsCalculator:
         
         elif query.stakeholder == StakeholderType.PLANNER:
             # Planner analysis: accuracy ≥ 90%
+            # New 1125: Add query to fix bugs
             if query.query_type == "location":
                 # For location queries, use coverage/completeness as proxy for actionable
                 return query.completeness >= self.planner_thresholds.get('coverage', 0.80)
@@ -91,6 +92,7 @@ class MetricsCalculator:
         
         elif query.stakeholder == StakeholderType.PLANNER:
             # Planner: latency < 500ms AND accuracy > 90%
+            # New 1125: Add query to fix bugs
             if query.query_type == "location":
                 return (query.latency_ms < self.planner_thresholds['latency_ms'] and
                         query.completeness >= self.planner_thresholds.get('coverage', 0.80))

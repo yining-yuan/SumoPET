@@ -66,6 +66,8 @@ $$ \text{Error} = | \text{Position}_{\text{Encrypted}} - \text{Position}_{\text{
 | `adaptive_pet_engine.py` | Updated `select_mechanism`. For `encrypted-input` mode, it returns `PrivacyMechanism.NONE` because the noise is already baked in. |
 | `experiment_controller.py` | Added logic to save Ground Truth during baseline runs and load it during encrypted runs to ensure fair comparison. |
 
+(Search in the files for 1125 to see updates.)
+
 ## 6. How to Run
 
 1.  **Generate Ground Truth:**

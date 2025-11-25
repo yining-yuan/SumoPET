@@ -120,16 +120,11 @@ def run_experiment(mode: str, cfg: str, output_dir: str, max_steps: int = 7200, 
         "--tripinfo-output", str(out / f"tripinfo_{mode}.xml"),
         "--emission-output", str(out / f"emission_{mode}.xml")
     ]
-
+    # New 1125: Add a new mode for encrypted-input
     if mode == "encrypted-input":
         if encrypt_routes is None:
             logger.error("Cannot run encrypted-input mode: build_encrypted_scenario.py not found or failed to import.")
             return
-
-        # Assume cfg is in config/ folder and routes are in ../routes/
-        # We need to find the original route file.
-        # Hardcoding based on project structure for now, or parsing cfg would be better.
-        # Project structure: trikala_maas_project/routes/persons_merged.rou.xml
         
         base_path = Path(cfg).parent.parent # trikala_maas_project/
         routes_dir = base_path / "routes"

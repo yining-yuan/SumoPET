@@ -39,7 +39,7 @@ class ExperimentController:
         self.baseline_decisions = []
         self.degraded_decisions = []
         
-        # Ground Truth Storage for Encrypted Input Mode
+        # New 1125: Ground Truth Storage for Encrypted Input Mode
         self.ground_truth_store = {}
         self.ground_truth_file = self.export_dir / "baseline_ground_truth.pkl"
         
@@ -62,7 +62,7 @@ class ExperimentController:
         current_entities = self.context_broker.query_all_vehicles()
         current_counts = self.context_broker.get_counts()
         
-        # Determine "True Value" based on mode
+        # New 1125: Determine "True Value" based on mode
         if self.mode == "baseline":
             # In baseline, current state IS the ground truth
             if query_type == "location":
@@ -108,10 +108,26 @@ class ExperimentController:
             count_error = 0
             
         else:  # count query
-            # For encrypted-input, reported value is current simulation counts
+            # New 1125: For encrypted-input, reported value is current simulation counts
             if mechanism == PrivacyMechanism.K_ANONYMITY:
-                 reported_value = current_counts
-                 completeness = 1.0
+                # Counts are already k-anonymous (no identifiable data)
+                # Nothing to do here
+                # Apply k-anonymity to entities (returns list of tuples)
+                
+                # anonymized_locs, completeness = self.pets_engine.apply_privacy(
+                #     entities, mechanism, epsilon, "location"
+                # )
+                # # Count suppressed entities
+                # reported_value = {
+                #     'taxis': 0,
+                #     'bikes': 0,
+                #     'cars': 0,
+                #     'buses': 0,
+                #     'total': len(anonymized_locs)
+                # }
+
+                reported_value = current_counts
+                completeness = 1.0
             else:
                 reported_value, completeness = self.pets_engine.apply_privacy(
                     current_counts, mechanism, epsilon, query_type
@@ -273,7 +289,7 @@ class ExperimentController:
     def export_results(self):
         """Export detailed results and final metrics"""
         
-        # Save ground truth if in baseline mode
+        # New 1125: Save ground truth if in baseline mode
         if self.mode == "baseline":
             logger.info(f"Saving baseline ground truth to {self.ground_truth_file}")
             with open(self.ground_truth_file, 'wb') as f:
