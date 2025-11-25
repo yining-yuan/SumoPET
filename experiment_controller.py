@@ -14,6 +14,8 @@ import math
 
 import traci
 
+import pickle
+
 import logging
 logger = logging.getLogger(__name__)
 
@@ -37,6 +39,18 @@ class ExperimentController:
         self.baseline_decisions = []
         self.degraded_decisions = []
         
+        # Ground Truth Storage for Encrypted Input Mode
+        self.ground_truth_store = {}
+        self.ground_truth_file = self.export_dir / "baseline_ground_truth.pkl"
+        
+        if self.mode == "encrypted-input":
+            if self.ground_truth_file.exists():
+                logger.info(f"Loading baseline ground truth from {self.ground_truth_file}")
+                with open(self.ground_truth_file, 'rb') as f:
+                    self.ground_truth_store = pickle.load(f)
+            else:
+                logger.warning(f"Ground truth file not found at {self.ground_truth_file}. Metrics will be invalid (self-comparison).")
+        
         logger.info(f"=== EXPERIMENT MODE: {mode} ===")
     
     def process_query(self, step: int, stakeholder: StakeholderType, 
@@ -44,51 +58,63 @@ class ExperimentController:
         """Process a single query with privacy"""
         start_time = time.time()
         
-        # Get ground truth
-        entities = self.context_broker.query_all_vehicles()
-        true_counts = self.context_broker.get_counts()
+        # Get ground truth from current simulation state
+        current_entities = self.context_broker.query_all_vehicles()
+        current_counts = self.context_broker.get_counts()
+        
+        # Determine "True Value" based on mode
+        if self.mode == "baseline":
+            # In baseline, current state IS the ground truth
+            if query_type == "location":
+                true_value = [(e.id, e.location) for e in current_entities]
+            else:
+                true_value = current_counts
+            
+            # Save for later use by encrypted mode
+            if step not in self.ground_truth_store:
+                self.ground_truth_store[step] = {}
+            self.ground_truth_store[step][query_type] = true_value
+            
+        elif self.mode == "encrypted-input":
+            # In encrypted mode, try to load ground truth from baseline run
+            if step in self.ground_truth_store and query_type in self.ground_truth_store[step]:
+                true_value = self.ground_truth_store[step][query_type]
+            else:
+                # Fallback if missing (e.g. different step intervals)
+                if query_type == "location":
+                    true_value = [(e.id, e.location) for e in current_entities]
+                else:
+                    true_value = current_counts
+        else:
+            # Standard modes (static-laplace, adaptive)
+            if query_type == "location":
+                true_value = [(e.id, e.location) for e in current_entities]
+            else:
+                true_value = current_counts
         
         # Select and apply PET
         mechanism, epsilon = self.pets_engine.select_mechanism(stakeholder, query_type)
         
         if query_type == "location":
-            true_value = [(e.id, e.location) for e in entities] # Does the operator need anything else?
-
+            # For encrypted-input, reported value is the current simulation state (which is perturbed)
+            # For others, it's the result of applying privacy to current state
             reported_value, completeness = self.pets_engine.apply_privacy(
-                entities, mechanism, epsilon, query_type
+                current_entities, mechanism, epsilon, query_type
             )
 
             # Calculate error
+            # Note: For encrypted-input, location error might be high/undefined due to ID mismatch
             error_meters = self._calculate_location_error(true_value, reported_value)
             count_error = 0
             
         else:  # count query
-            true_value = true_counts
-            
-            # For k-anonymity, apply to entities then count the result
+            # For encrypted-input, reported value is current simulation counts
             if mechanism == PrivacyMechanism.K_ANONYMITY:
-                # Counts are already k-anonymous (no identifiable data)
-                # Nothing to do here
-                reported_value = true_counts
-                completeness = 1.0
-
-                # Apply k-anonymity to entities (returns list of tuples)
-                
-                # anonymized_locs, completeness = self.pets_engine.apply_privacy(
-                #     entities, mechanism, epsilon, "location"
-                # )
-                # # Count suppressed entities
-                # reported_value = {
-                #     'taxis': 0,
-                #     'bikes': 0,
-                #     'cars': 0,
-                #     'buses': 0,
-                #     'total': len(anonymized_locs)
-                # }
+                 reported_value = current_counts
+                 completeness = 1.0
             else:
-                # For DP mechanisms, apply directly to counts
                 reported_value, completeness = self.pets_engine.apply_privacy(
-                    true_counts, mechanism, epsilon, query_type
+                    current_counts, mechanism, epsilon, query_type
                 )
             
             # Calculate error
@@ -247,6 +273,12 @@ class ExperimentController:
     def export_results(self):
         """Export detailed results and final metrics"""
         
+        # Save ground truth if in baseline mode
+        if self.mode == "baseline":
+            logger.info(f"Saving baseline ground truth to {self.ground_truth_file}")
+            with open(self.ground_truth_file, 'wb') as f:
+                pickle.dump(self.ground_truth_store, f)
+
         # Export query-level results
         with open(self.export_dir / f"queries_{self.mode}.csv", 'w', newline='') as f:
             writer = csv.writer(f)

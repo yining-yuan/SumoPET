@@ -18,6 +18,10 @@ import shutil
 import numpy as np
 
 from experiment_controller import ExperimentController
+try:
+    from build_encrypted_scenario import encrypt_routes
+except ImportError:
+    encrypt_routes = None
 
 import pandas as pd
 
@@ -116,6 +120,43 @@ def run_experiment(mode: str, cfg: str, output_dir: str, max_steps: int = 7200, 
         "--tripinfo-output", str(out / f"tripinfo_{mode}.xml"),
         "--emission-output", str(out / f"emission_{mode}.xml")
     ]
+
+    if mode == "encrypted-input":
+        if encrypt_routes is None:
+            logger.error("Cannot run encrypted-input mode: build_encrypted_scenario.py not found or failed to import.")
+            return
+
+        # Assume cfg is in config/ folder and routes are in ../routes/
+        # We need to find the original route file.
+        # Hardcoding based on project structure for now, or parsing cfg would be better.
+        # Project structure: trikala_maas_project/routes/persons_merged.rou.xml
+        
+        base_path = Path(cfg).parent.parent # trikala_maas_project/
+        routes_dir = base_path / "routes"
+        original_routes = routes_dir / "persons_merged.rou.xml"
+        encrypted_routes = routes_dir / "persons_encrypted.rou.xml"
+        public_transport = routes_dir / "public_transport.rou.xml"
+
+        if not original_routes.exists():
+             # Fallback if running from different CWD
+             original_routes = Path("trikala_maas_project/routes/persons_merged.rou.xml")
+             encrypted_routes = Path("trikala_maas_project/routes/persons_encrypted.rou.xml")
+             public_transport = Path("trikala_maas_project/routes/public_transport.rou.xml")
+
+        if original_routes.exists():
+            success = encrypt_routes(str(original_routes), str(encrypted_routes))
+            if success:
+                logger.info(f"Using encrypted routes: {encrypted_routes}")
+                # Override route files in SUMO command
+                # Note: public transport usually needs to be included too
+                route_files_arg = f"{public_transport},{encrypted_routes}"
+                cmd.extend(["--route-files", route_files_arg])
+            else:
+                logger.error("Encryption failed, aborting.")
+                return
+        else:
+            logger.error(f"Original route file not found at {original_routes}")
+            return
     
     logger.info(f"Starting SUMO for {mode} mode using: {sumo_bin}")
     traci.start(cmd)
@@ -143,7 +184,7 @@ def main():
     )
     
     parser.add_argument("mode", 
-                       choices=["baseline", "static-laplace", "static-kanon", "adaptive"],
+                       choices=["baseline", "static-laplace", "static-kanon", "adaptive", "encrypted-input"],
                        help="Experimental condition from paper")
     parser.add_argument("--cfg", required=True, 
                        help="SUMO config file")

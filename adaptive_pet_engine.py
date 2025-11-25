@@ -66,6 +66,10 @@ class AdaptivePETEngine:
         elif self.mode == "static-kanon":
             return PrivacyMechanism.K_ANONYMITY, 5
         
+        elif self.mode == "encrypted-input":
+            # Privacy applied at input level, no additional query noise
+            return PrivacyMechanism.NONE, float('inf')
+        
         elif self.mode == "adaptive":
             # Stakeholder-specific selection from paper
             if stakeholder == StakeholderType.OPERATOR:

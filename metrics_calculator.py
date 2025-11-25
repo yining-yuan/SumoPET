@@ -58,6 +58,10 @@ class MetricsCalculator:
         
         elif query.stakeholder == StakeholderType.PLANNER:
             # Planner analysis: accuracy ≥ 90%
+            if query.query_type == "location":
+                # For location queries, use coverage/completeness as proxy for actionable
+                return query.completeness >= self.planner_thresholds.get('coverage', 0.80)
+
             accuracy = self.calculate_response_accuracy(
                 query.reported_value.get('total', 0) if isinstance(query.reported_value, dict) else query.reported_value,
                 query.true_value.get('total', 0) if isinstance(query.true_value, dict) else query.true_value
@@ -87,6 +91,10 @@ class MetricsCalculator:
         
         elif query.stakeholder == StakeholderType.PLANNER:
             # Planner: latency < 500ms AND accuracy > 90%
+            if query.query_type == "location":
+                return (query.latency_ms < self.planner_thresholds['latency_ms'] and
+                        query.completeness >= self.planner_thresholds.get('coverage', 0.80))
+
             accuracy = self.calculate_response_accuracy(
                 query.reported_value.get('total', 0) if isinstance(query.reported_value, dict) else query.reported_value,
                 query.true_value.get('total', 0) if isinstance(query.true_value, dict) else query.true_value

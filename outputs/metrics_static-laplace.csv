@@ -1,0 +1,6 @@
+metric,value
+response_accuracy,0.969
+actionable_rate,0.653
+sla_compliance,0.994
+temporal_consistency,0.774
+decision_quality,0.016
